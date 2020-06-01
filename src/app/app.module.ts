@@ -11,6 +11,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
 import { StatusCartComponent } from './status-cart/status-cart.component';
 import { FormularioprimeroComponent } from './formularioprimero/formularioprimero.component';
 import { FormulariosegundoComponent } from './formulariosegundo/formulariosegundo.component';
+import { FormvalidacionComponent } from './formvalidacion/formvalidacion.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormulariosegundoComponent } from './formulariosegundo/formulariosegund
     StatusCartComponent,
     FormularioprimeroComponent,
     FormulariosegundoComponent,
+    FormvalidacionComponent,
   ],
   imports: [
     BrowserModule,

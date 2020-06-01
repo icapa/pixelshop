@@ -1,0 +1,59 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)" novalidate>
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input formControlName="nombre" class="form-control"  aria-describedby="emailHelp" placeholder="Tú nombre...">
+    </div>
+    <div class="form-group">
+      <label for="apellidos">Apellidos:</label>
+      <input formControlName="apellidos" class="form-control"  placeholder="Tus apellidos...">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input formControlName="email" type="email" class="form-control"  placeholder="tú correo electrónico...">
+        <small *ngIf="formulario.controls.email.errors"
+        id="emailHelp" class="form-text text-muted">El email no es válido!</small>
+    </div>
+   <!--
+    <p *ngIf="formulario.get('email').hasError('required')">Email:Este campo es requerido</p>
+    {{formulario.controls.email.errors | json}}
+   -->
+
+
+    
+    <button type="submit" [disabled]="!formulario.valid" class="btn btn-primary">Submit</button>
+    
+  </form>
+
+
+
+
+
+<!--
+<section id="forms">
+    <header>
+        <h1>Registro</h1></header>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)" novalidate>
+        <fieldset id="forms__input">
+            <legend>Input fields</legend>
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input formControlName="nombre">
+            </p>
+            <p>
+                <label for="apellidos">Apellidos:</label>
+                <input formControlName="apellidos">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input formControlName="email">
+            </p>
+            
+            <span *ngIf="formulario.get('nombre').hasError('required')">Este campo es requerido</span>
+            {{formulario.controls.nombre.errors | json}}
+            
+            
+            <p><button class="button primary" type="submit" [disabled]="!formulario.valid">Submit</button></p>
+        </fieldset>
+    </form>
+</section>
+-->

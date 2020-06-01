@@ -58,7 +58,8 @@ export class StatefulComponent implements OnInit, OnDestroy {
   }
 
   onConfirm(){
-    alert('Has añadido un nuevo curso');
+    //alert('Has añadido un nuevo curso');
+    console.log('Add, nuevo curso');
   }
 
   onKeyboard(_event){
