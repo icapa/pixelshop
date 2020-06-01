@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Product } from '../interface/product';
 
 @Component({
   selector: 'app-stateless',
   templateUrl: './stateless.component.html',
-  styleUrls: ['./stateless.component.css']
+  styleUrls: ['./stateless.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StatelessComponent implements OnInit {
 
@@ -28,5 +29,8 @@ export class StatelessComponent implements OnInit {
 
   isDisabled(){
     return !!this.disable;
+  }
+  mensaje(){
+    alert('¿No te vas a descargar la imagen verdad?');
   }
 }
